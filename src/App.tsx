@@ -1,25 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { UserProvider } from './UserContext';
+import Users from './Users';
+import { Users2 } from './Users2';
+import { Users3 } from './Users3';
+import { Users4 } from './Users4';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserProvider>
+      <div className='App'>
+        {/* <Users /> */}
+        {/* <Users2 /> */}
+        {/* <Users3 /> */}
+        <Users4 />
+      </div>
+    </UserProvider>
   );
 }
 
